@@ -147,6 +147,8 @@ echo "<br> Total de $num_linhas resultados";
     echo "Nenhuma partida encontrada.";    
 }
 echo "<a href='create.php'>Registrar partida</a>";
+echo "<br>";
+echo "<a href='../menu/index.php'>Sair</a>";
 
 $conn -> close();
 

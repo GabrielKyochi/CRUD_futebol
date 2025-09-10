@@ -146,10 +146,17 @@ echo "<br> Total de $num_linhas resultados";
     echo "Nenhum jogador encontrado.";    
 }
 echo "<a href='create.php'>Registrar jogador</a>";
+echo "<br>";
+echo "<a href='../menu/index.php'>Sair</a>";
 
 $conn -> close();
-
 ?>
+
+
+
 </body>
+
+
+
 </html>
 

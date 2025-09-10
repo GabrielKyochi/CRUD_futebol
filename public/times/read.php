@@ -103,5 +103,7 @@ echo "<br> Total de $num_linhas resultados";
     echo "Nenhum Registro de Time Encontrado.";
     echo "<a href='create.php'>Criar Registro de Time</a>";
 }
+echo "<br>";
+echo "<a href='../menu/index.php'>Sair</a>";
 
 $conn -> close();
