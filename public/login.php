@@ -45,9 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
 
 <?php if (!empty($_SESSION["user_id"])): 
-    
-        header("Location: menu/index.php");
 
+        header("Location: menu/index.php");
+        
     ?>
   
 
@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <button type="submit">Entrar</button>
       </a>
     </form>
+    <p><small>gabriel / 123</small></p>
   </div>
 <?php endif; ?>
 

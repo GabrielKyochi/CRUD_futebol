@@ -1,5 +1,5 @@
 <?php
-include '../config/db.php';
+include '../../config/db.php';
 
 ?>
 
@@ -16,7 +16,7 @@ include '../config/db.php';
     </header>
 
     <main class="centralizar flex">
-<a href="../jogadores/read.php>
+<a href="../jogadores/read.php">
 <button class="botoes_menu">
     <h1>Jogadores</h1>
 </button>
