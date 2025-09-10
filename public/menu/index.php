@@ -34,7 +34,11 @@ include '../../config/db.php';
     </main>
 
     <footer>
-
+        <div class="centralizar">
+            <a href="../login.php">
+                <button id="botao_voltar" type="submit">Voltar</button>
+            </a>
+        </div>
     </footer>
 </body>
 </html>

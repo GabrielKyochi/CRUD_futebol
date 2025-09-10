@@ -1,4 +1,5 @@
 <?php
+
 $mysqli = new mysqli("localhost", "root", "root", "futebol_db");
 if ($mysqli->connect_errno) {
     die("Erro de conexão: " . $mysqli->connect_error);
@@ -40,16 +41,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
 <meta charset="utf-8">
 <title>Login Simples</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../public/assets/style.css">
 </head>
 <body>
 
-<?php if (!empty($_SESSION["user_id"])): 
+<?php if (!empty($_SESSION["user_id"])): ?>
+  <div class="card">
+    <h3>Bem-vindo, <?= $_SESSION["username"] ?>!</h3>
+    <p>Sessão ativa.</p>
+    <p><a href="?logout=1">Sair</a></p>
+    <h3>Para começar a gerenciar as equipes de futebol:</h3>
+    <p><a href="../public/menu/index.php">Clique aqui</a></p>
 
-        header("Location: menu/index.php");
-        
-    ?>
-  
+  </div>
 
 <?php else: ?>
   <div class="card">
@@ -58,11 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form method="post">
       <input type="text" name="username" placeholder="Usuário" required>
       <input type="password" name="password" placeholder="Senha" required>
-      <a href="../public/menu/index.php">
       <button type="submit">Entrar</button>
-      </a>
     </form>
-    <p><small>gabriel / 123</small></p>
+    <p><small>Dica: gabriel / 123</small></p>
   </div>
 <?php endif; ?>
 
